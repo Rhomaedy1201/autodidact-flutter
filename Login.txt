@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        backgroundColor: Color(0xffdddddd),
+        body: Column(
+          // mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Container(
+              child: Center(
+                child: Image.asset(
+                  'assets/images/icon_login.png',
+                  width: 200,
+                  height: 200,
+                ),
+              ),
+            ),
+            Text(
+              "Login to beUpToDate",
+              style: TextStyle(
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue),
+            ),
+            Text("Trailer Info at a glance"),
+            Container(
+              child: TextFormField(
+                decoration: InputDecoration(
+                  hintText: "Username",
+                  hintStyle: TextStyle(
+                    fontSize: 15,
+                  ),
+                  fillColor: Colors.white,
+                  filled: true,
+                  enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(width: 1, color: Colors.white),
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(17),
+                    ),
+                  ),
+                ),
+              ),
+              margin: EdgeInsets.all(30),
+            ),
+          ],
+        ),
+        // bottomNavigationBar: Material(
+        //   color: Colors.amber,
+        // ),
+      ),
+    );
+  }
+}

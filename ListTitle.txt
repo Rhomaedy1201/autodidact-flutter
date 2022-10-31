@@ -1,0 +1,66 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(myApp());
+}
+
+class myApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('List View'),
+        ),
+        body: ListView(
+          children: [
+            ListTile(
+              contentPadding: EdgeInsets.all(10),
+              title: Text('Muhammad Rhomaedi'),
+              subtitle: Text(
+                'this is subtitle sldfjlsfj sdlfjsdlfj sdfljksdlfjsldfsljdl sdlfjsldfjsh gdjhftsdhfuyebkhdk sjkdjfnbbjfjjhh kjkj',
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+              ),
+              leading: CircleAvatar(),
+              trailing: Text('10:00 PM'),
+              dense: true,
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              title: Text('Muhammad Rhomaedi'),
+              subtitle: Text('this is subtitle...'),
+              leading: CircleAvatar(),
+              trailing: Text('10:00 PM'),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              title: Text('Muhammad Rhomaedi'),
+              subtitle: Text('this is subtitle...'),
+              leading: CircleAvatar(),
+              trailing: Text('10:00 PM'),
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+            ListTile(
+              title: Text('Muhammad Rhomaedi'),
+              subtitle: Text('this is subtitle...'),
+              leading: CircleAvatar(),
+              trailing: Text('10:00 PM'),
+              // tileColor: Colors.pink,
+            ),
+            Divider(
+              color: Colors.black,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
